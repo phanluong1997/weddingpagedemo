@@ -11,7 +11,6 @@ body {
 }
 
 .hero {
-  /* memenuhi layar penuh sesuai dengan dimensi tampilannya*/
   min-height: 100vh;
   /* background-color: var(--bg); */
   position: relative;
@@ -23,19 +22,43 @@ body {
   text-shadow: var(--shadow);
 }
 
+/* Đảm bảo nội dung hiển thị trên ảnh */
+.hero main {
+  position: relative;
+  z-index: 1;
+}
+
 .hero::before {
   content: "";
   position: absolute;
-  top: 0;
+  top: 0px;
   left: 0;
   width: 100%;
   height: 100%;
   background-image: url("../img/bg-wedding.jpg");
   z-index: -1;
-  /* filter: blur(10px); */
+  filter: blur(0px);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+    /* Mobile fixes */
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+  
+}
+@media (max-width: 320px) {
+  .hero::before {
+    background-size: cover;
+    background-position: 30% center;
+  }
+}
+/* Fix orientation change */
+@media (orientation: landscape) and (max-height: 500px) {
+  .hero::before {
+    background-size: cover;
+    background-position: center 30%;
+  }
 }
 
 .hero h1 {
@@ -133,18 +156,6 @@ body {
 
 .home .couple img {
   width: 100%;
-}
-
-.home .heart {
-  width: 50px;
-  height: 50px;
-  background-color: white;
-  display: flex;
-  border-radius: 50%;
-  box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%) translateY(65px);
 }
 
 .home .heart i {
@@ -792,4 +803,478 @@ footer li {
 .description {
   display: block !important;
   opacity: 1 !important;
+}
+
+/* css  love history */
+.story {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.8s ease;
+}
+
+.story.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.timeline {
+  list-style: none;
+  padding: 0;
+  position: relative;
+}
+
+.timeline::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background: #e91e63;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.timeline li {
+  margin-bottom: 80px;
+  position: relative;
+  opacity: 0;
+  transform: translateY(50px);
+  transition: all 0.8s ease;
+}
+
+.timeline li.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.timeline-img {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  background-size: cover;
+  background-position: center;
+  border: 4px solid #fff;
+  box-shadow: 0 0 20px rgba(0,0,0,0.1);
+  z-index: 2;
+}
+
+.timeline-panel {
+  width: 40%;
+  padding: 20px;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 5px 25px rgba(0,0,0,0.1);
+  position: relative;
+}
+
+.timeline li:nth-child(odd) .timeline-panel {
+  margin-left: 60%;
+}
+
+.timeline li:nth-child(even) .timeline-panel {
+  margin-right: 60%;
+}
+
+.timeline-inverted .timeline-panel {
+  margin-right: 60%;
+  margin-left: 0;
+}
+
+.timeline-heading h3 {
+  color: #e91e63;
+  margin-bottom: 5px;
+  font-size: 1.4rem;
+}
+
+.timeline-heading span {
+  color: #888;
+  font-size: 0.9rem;
+}
+
+.timeline-body p {
+  margin-top: 10px;
+  line-height: 1.6;
+}
+
+/* Animation cho từng phần tử */
+.timeline-img {
+  transition: all 0.8s ease 0.2s;
+  transform: scale(0);
+}
+
+.timeline-panel {
+  transition: all 0.8s ease 0.4s;
+  opacity: 0;
+  transform: translateX(-30px);
+}
+
+.timeline li:nth-child(even) .timeline-panel {
+  transform: translateX(30px);
+}
+
+.timeline li.visible .timeline-img {
+  transform: scale(1) translateX(-50%);
+}
+
+.timeline li.visible .timeline-panel {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* Mobile responsive */
+@media (max-width: 768px) {
+  .timeline::before {
+    left: 30px;
+  }
+  
+  .timeline-img {
+    left: 30px;
+  }
+  
+  .timeline-panel {
+    width: calc(100% - 80px);
+    margin-left: 80px !important;
+    margin-right: 0 !important;
+  }
+  
+  .timeline li:nth-child(odd) .timeline-panel,
+  .timeline li:nth-child(even) .timeline-panel {
+    margin-left: 80px !important;
+    margin-right: 0 !important;
+  }
+  
+  .timeline li.visible .timeline-img {
+    transform: scale(1) translateX(-30px);
+  }
+}
+/* code grallarey */
+.gallery {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.8s ease;
+}
+
+.gallery.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Animation cho các items trong gallery */
+.gallery .col {
+  opacity: 0;
+  transform: scale(0.8) translateY(50px);
+  transition: all 0.6s ease;
+}
+
+.gallery .col.visible {
+  opacity: 1;
+  transform: scale(1) translateY(0);
+}
+
+/* Hiệu ứng hover cho ảnh */
+.gallery .col a {
+  display: block;
+  overflow: hidden;
+  border-radius: 10px;
+  position: relative;
+}
+
+.gallery .col img {
+  transition: all 0.5s ease;
+  filter: grayscale(20%);
+}
+
+.gallery .col a:hover img {
+  transform: scale(1.05);
+  filter: grayscale(0%);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+}
+
+/* Overlay effect trên hover */
+.gallery .col a::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(45deg, rgba(233, 30, 99, 0.1), rgba(156, 39, 176, 0.1));
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  z-index: 1;
+  border-radius: 10px;
+}
+
+.gallery .col a:hover::before {
+  opacity: 1;
+}
+
+/* Zoom icon trên hover */
+.gallery .col a::after {
+  content: '🔍';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0);
+  font-size: 2rem;
+  color: white;
+  text-shadow: 0 2px 10px rgba(0,0,0,0.5);
+  z-index: 2;
+  transition: transform 0.3s ease;
+}
+
+.gallery .col a:hover::after {
+  transform: translate(-50%, -50%) scale(1);
+}
+
+/* Staggered animation delay cho các items */
+.gallery .col:nth-child(1) { transition-delay: 0.1s; }
+.gallery .col:nth-child(2) { transition-delay: 0.2s; }
+.gallery .col:nth-child(3) { transition-delay: 0.3s; }
+.gallery .col:nth-child(4) { transition-delay: 0.4s; }
+.gallery .col:nth-child(5) { transition-delay: 0.5s; }
+.gallery .col:nth-child(6) { transition-delay: 0.6s; }
+.gallery .col:nth-child(7) { transition-delay: 0.7s; }
+.gallery .col:nth-child(8) { transition-delay: 0.8s; }
+
+/* Responsive */
+@media (max-width: 768px) {
+  .gallery .col {
+    transform: scale(0.9) translateY(30px);
+  }
+  
+  .gallery .col a::after {
+    font-size: 1.5rem;
+  }
+  
+  /* Giảm delay trên mobile */
+  .gallery .col:nth-child(n) { 
+    transition-delay: 0.1s; 
+  }
+}
+/* //couple animation */
+.home {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.8s ease;
+}
+
+.home.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Animation cho text content */
+.home h2 {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 0.8s ease 0.2s;
+}
+
+.home h3 {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 0.8s ease 0.4s;
+}
+
+.home p {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 0.8s ease 0.6s;
+}
+
+.home.visible h2,
+.home.visible h3,
+.home.visible p {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Animation cho couple section bên trong home */
+.couple {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.8s ease 0.8s;
+}
+
+.home.visible .couple {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Animation cho từng phần trong couple */
+.couple .col-md-6 {
+  opacity: 0;
+  transform: translateX(-50px);
+  transition: all 0.8s ease 1s;
+}
+
+.couple .col-md-6:nth-child(3) {
+  transform: translateX(50px);
+}
+
+.home.visible .couple .col-md-6 {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* Animation cho trái tim */
+.couple .heart {
+  opacity: 0;
+  transform: scale(0);
+  transition: all 0.6s ease 1.4s;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 20px 0;
+}
+
+.home.visible .couple .heart {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.couple .heart i {
+  color: #e91e63;
+  font-size: 2.5rem;
+  animation: heartbeat 2s ease-in-out infinite;
+}
+
+/* Heartbeat animation */
+@keyframes heartbeat {
+  0% {
+    transform: scale(1);
+  }
+  5% {
+    transform: scale(1.1);
+  }
+  10% {
+    transform: scale(1);
+  }
+  15% {
+    transform: scale(1.2);
+  }
+  50% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+/* Animation cho ảnh */
+.couple img {
+  opacity: 0;
+  transform: scale(0.8) rotate(-10deg);
+  transition: all 0.8s ease 1.2s;
+  border: 4px solid #fff;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+}
+
+.couple .col-md-6:nth-child(3) img {
+  transform: scale(0.8) rotate(10deg);
+}
+
+.home.visible .couple img {
+  opacity: 1;
+  transform: scale(1) rotate(0deg);
+}
+
+/* Animation cho text trong couple */
+.couple h3 {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 0.6s ease 1.6s;
+  color: #e91e63;
+  margin-bottom: 15px;
+}
+
+.couple p {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 0.6s ease 1.8s;
+  line-height: 1.8;
+}
+
+.home.visible .couple h3,
+.home.visible .couple p {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Hover effects */
+.couple img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 15px 40px rgba(233, 30, 99, 0.3);
+  transition: all 0.3s ease;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .home {
+    padding: 40px 0;
+  }
+  
+  .couple .col-md-6 {
+    transform: translateY(30px) !important;
+  }
+  
+  .home.visible .couple .col-md-6 {
+    transform: translateY(0) !important;
+  }
+  
+  .couple img {
+    width: 120px;
+    height: 120px;
+    margin: 0 auto 20px;
+  }
+  
+  .couple .heart {
+    margin: 30px 0;
+  }
+  
+  .couple .heart i {
+    font-size: 2rem;
+  }
+  
+  /* Đảm bảo layout trên mobile */
+  .couple .col-8,
+  .couple .col-4 {
+    text-align: center !important;
+  }
+  
+  .couple .row .row {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+/* Small mobile */
+@media (max-width: 576px) {
+  .couple img {
+    width: 100px;
+    height: 100px;
+  }
+  
+  .couple h3 {
+    font-size: 1.3rem;
+  }
+  
+  .couple p {
+    font-size: 0.9rem;
+  }
+  
+  .home h2 {
+    font-size: 1.8rem;
+  }
+  
+  .home h3 {
+    font-size: 1.2rem;
+  }
 }
