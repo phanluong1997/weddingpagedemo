@@ -150,7 +150,12 @@
 
     <section id="home" class="home">
       <div class="container">
-        <div class="row justify-content-center">
+        <!-- Buttons -->
+        <div class="switch-buttons">
+          <button class="switch-btn active" data-target="content1">Lễ Thành Hôn</button>
+          <button class="switch-btn" data-target="content2">Lễ Vu Quy</button>
+        </div>
+        <div class="row justify-content-center switch-content active" id="row-content1">
           <div class="col-md-8 text-center">
             <h2>Lễ Thành Hôn</h2>
             <h3>Được tổ chức vào ngày 20 tháng 06 năm 2026 tại Tư gia</h3>
@@ -160,11 +165,21 @@
             </p>
           </div>
         </div>
+        <div class="row justify-content-center switch-content" id="row-content2">
+          <div class="col-md-8 text-center">
+            <h2>Lễ Vu Quy</h2>
+            <h3>Được tổ chức vào ngày 18 tháng 06 năm 2026 tại Tư gia</h3>
+            <p>
+              Với tất cả sự trân trọng, chúng tôi xin kính mời Quý Ông/Bà/Anh/Chị/Em/Bạn 
+              đến tham dự lễ cưới của chúng tôi để chung vui và chúc phúc.
+            </p>
+          </div>
+        </div>
     
-        <div class="row couple">
+        <div class="row couple switch-content active" id="couple-content1">
           <div class="col-md-6">
             <div class="row">
-              <div class="col-8 text-end">
+              <div class="col-8">
                 <h3>Phạm Quang Long</h3>
                 <p>
                   Chú rể hiền lành, vui tính và luôn yêu thương gia đình.
@@ -188,6 +203,22 @@
                   <img src="img/couple/user4.jpg" class="img-responsive rounded-circle" alt="Hue" />
                 </a>
               </div>
+              <div class="col-8 text-couple">
+                <h3>Lê Thị Huệ</h3>
+                <p>
+                  Cô dâu hiền lành, vui tính và luôn yêu thương gia đình.
+                  Là con gái của <br />Ông Lê Càng.
+                  <br />
+                  và <br />
+                  Bà Trần Thị Sen.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row couple switch-content" id="couple-content2">
+          <div class="col-md-6">
+            <div class="row">
               <div class="col-8">
                 <h3>Lê Thị Huệ</h3>
                 <p>
@@ -196,6 +227,30 @@
                   <br />
                   và <br />
                   Bà Trần Thị Sen.
+                </p>
+              </div>
+              <div class="col-4">
+                <a href="img/couple/user4.jpg" data-toggle="lightbox">
+                  <img src="img/couple/user4.jpg" class="img-responsive rounded-circle" alt="Hue" />
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="row">
+              <div class="col-4">
+                <a href="img/couple/user3.jpg" data-toggle="lightbox">
+                  <img src="img/couple/user3.jpg" class="img-responsive rounded-circle" alt="Long" />
+                </a>
+              </div>
+              <div class="col-8 text-couple">
+                <h3>Phạm Quang Long</h3>
+                <p>
+                  Chú rể hiền lành, vui tính và luôn yêu thương gia đình.
+                  Là con trai của <br />Ông xxx
+                  <br />
+                  và <br />
+                  Bà xxx.
                 </p>
               </div>
             </div>
@@ -210,12 +265,6 @@
             <h2>Thiệp Mời</h2>
             <h3>Trân trọng kính mời</h3>
             <div class="content-switcher">
-              <!-- Buttons -->
-              <div class="switch-buttons">
-                <button class="switch-btn active" data-target="content1">Lễ Thành Hôn</button>
-                <button class="switch-btn" data-target="content2">Lễ Vu Quy</button>
-              </div>
-              
               <!-- Content Container -->
               <div class="content-container">
                 <!-- Content 1 -->
@@ -499,7 +548,7 @@
           <div class="col-12">
             <div class="mb-3">
               <label for="name" class="form-label">Họ và Tên</label>
-              <input type="text" class="form-control" id="name" name="name" />
+              <input type="text" class="form-control" id="name" name="name" required/>
             </div>
           </div>
           <div class="col-12">
@@ -509,21 +558,21 @@
                 type="number"
                 min="1"
                 max="5"
-                length="1"
                 value="1"
                 class="form-control"
                 id="soluong"
                 name="soluong"
+                required
               />
             </div>
           </div>
           <div class="col-12">
             <div class="mb-3">
               <label for="status" class="form-label">Xác Nhận</label>
-              <select name="status" id="status" class="form-select">
-                <option selected disabled>Vui lòng chọn một tuỳ chọn</option>
-                <option value="1" selected>Sẽ Tham dự</option>
-                <option value="0" selected>Không Tham dự</option>
+              <select name="status" id="status" class="form-select" required>
+                <option value="" selected disabled>Vui lòng chọn một tuỳ chọn</option>
+                <option value="1" >Sẽ Tham dự</option>
+                <option value="0" >Không Tham dự</option>
               </select>
             </div>
           </div>
@@ -969,6 +1018,8 @@
         const linkContent = document.getElementById('link-' + targetId);
         const divContent = document.getElementById('div-' + targetId);
         const div2Content = document.getElementById('div2-' + targetId);
+        const rowContent = document.getElementById('row-' + targetId);
+        const coupleContent = document.getElementById('couple-' + targetId);
 
         if (mainContent) mainContent.classList.add('active');
         if (targetButton) targetButton.classList.add('active');
@@ -976,6 +1027,9 @@
         if (linkContent) linkContent.classList.add('active');
         if (divContent) divContent.classList.add('active');
         if (div2Content) div2Content.classList.add('active');
+        if (rowContent) rowContent.classList.add('active');
+        if (coupleContent) coupleContent.classList.add('active');
+
       }
 
       // Khởi tạo
