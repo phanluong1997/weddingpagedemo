@@ -2,8 +2,8 @@
 <html lang="en" data-bs-theme="light">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Đám cuới Long Huệ</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Đám cưới Hải Đăng Hồng Ngọc</title>
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css"
       rel="stylesheet"
@@ -38,9 +38,9 @@
       class="hero w-100 h-100 p-3 mx-auto text-center d-flex justify-content-center align-items-center text-white"
     >
       <main>
-        <h4>Trân trọng kính mời <span>Quý Ông/Bà/Anh/Chị/Em/Bạn,</span></h4>
-        <h1>Long & Huệ</h1>
-        <p>Chúng tôi sẽ tổ chức lễ cưới trong: </p>
+        <h2>Hải Đăng & Hồng Ngọc</h2>
+      </main>
+      <main>
         <div class="simply-countdown"></div>
         <a href="#home" class="btn btn-lg mt-4 heart-btn" onclick="enableScroll(); createHearts(event)">
           Xem Thiệp Mời
@@ -150,144 +150,160 @@
 
     <section id="home" class="home">
       <div class="container">
-        <!-- Buttons -->
-        <div class="switch-buttons">
-          <button class="switch-btn active" data-target="content1">Lễ Thành Hôn</button>
-          <button class="switch-btn" data-target="content2">Lễ Vu Quy</button>
-        </div>
-        <div class="row justify-content-center switch-content active" id="row-content1">
-          <div class="col-md-8 text-center">
-            <h2>Lễ Thành Hôn</h2>
-            <h3>Được tổ chức vào ngày 20 tháng 06 năm 2026 tại Tư gia</h3>
-            <p>
-              Với tất cả sự trân trọng, chúng tôi xin kính mời Quý Ông/Bà/Anh/Chị/Em/Bạn 
-              đến tham dự lễ cưới của chúng tôi để chung vui và chúc phúc.
-            </p>
+        <div class="content-switcher">
+          <!-- Buttons -->
+          <div class="switch-buttons">
+            <button class="switch-btn active" data-target="content1">Lễ Thành Hôn</button>
+            <button class="switch-btn" data-target="content2">Lễ Vu Quy</button>
           </div>
-        </div>
-        <div class="row justify-content-center switch-content" id="row-content2">
-          <div class="col-md-8 text-center">
-            <h2>Lễ Vu Quy</h2>
-            <h3>Được tổ chức vào ngày 18 tháng 06 năm 2026 tại Tư gia</h3>
-            <p>
-              Với tất cả sự trân trọng, chúng tôi xin kính mời Quý Ông/Bà/Anh/Chị/Em/Bạn 
-              đến tham dự lễ cưới của chúng tôi để chung vui và chúc phúc.
-            </p>
-          </div>
-        </div>
-    
-        <div class="row couple switch-content active" id="couple-content1">
-          <div class="col-md-6">
-            <div class="row">
-              <div class="col-8">
-                <h3>Phạm Quang Long</h3>
-                <p>
-                  Chú rể hiền lành, vui tính và luôn yêu thương gia đình.
-                  Là con trai của <br />Ông xxx
-                  <br />
-                  và <br />
-                  Bà xxx.
-                </p>
-              </div>
-              <div class="col-4">
-                <a href="img/couple/user3.jpg" data-toggle="lightbox">
-                  <img src="img/couple/user3.jpg" class="img-responsive rounded-circle" alt="Long" />
-                </a>
-              </div>
+          
+          <!-- Content Container -->
+          <div class="content-container">
+            <!-- Content 1 -->
+            <div class="switch-content active" id="content1">
+              <!-- <div class="images-container">
+                <img src="img/gallery/thumbnail/thumb1.jpg" alt="Hình 1" class="switch-img active">
+              </div> -->
+              <h2>Lễ Thành Hôn</h2>
+              <b><span>Được tổ chức vào ngày 14 tháng 12 năm 2025 tại Tư gia nhà Trai</span></b><br>
+              <b><span>
+                Với tất cả sự trân trọng, chúng tôi xin kính mời Quý Ông/Bà/Anh/Chị/Em/Bạn 
+                đến tham dự lễ cưới của chúng tôi để chung vui và chúc phúc.
+              </span></b>
             </div>
-          </div>
-          <div class="col-md-6">
-            <div class="row">
-              <div class="col-4">
-                <a href="img/couple/user4.jpg" data-toggle="lightbox">
-                  <img src="img/couple/user4.jpg" class="img-responsive rounded-circle" alt="Hue" />
-                </a>
-              </div>
-              <div class="col-8 text-couple">
-                <h3>Lê Thị Huệ</h3>
-                <p>
-                  Cô dâu hiền lành, vui tính và luôn yêu thương gia đình.
-                  Là con gái của <br />Ông Lê Càng.
-                  <br />
-                  và <br />
-                  Bà Trần Thị Sen.
-                </p>
-              </div>
+            
+            <!-- Content 2 -->
+            <div class="switch-content" id="content2">
+              <!-- <div class="images-container">
+                <img src="img/gallery/thumbnail/thumb2.jpg" alt="Hình 2" class="switch-img">
+              </div> -->
+              <h2>Lễ Vu Quy</h2>
+              <b><span>Được tổ chức vào ngày 13 tháng 12 năm 2025 tại Tư gia nhà Gái</span></b><br>
+              <b><span>
+                Với tất cả sự trân trọng, chúng tôi xin kính mời Quý Ông/Bà/Anh/Chị/Em/Bạn 
+                đến tham dự lễ cưới của chúng tôi để chung vui và chúc phúc.
+              </span></b>
             </div>
           </div>
         </div>
-        <div class="row couple switch-content" id="couple-content2">
-          <div class="col-md-6">
-            <div class="row">
-              <div class="col-8">
-                <h3>Lê Thị Huệ</h3>
-                <p>
-                  Cô dâu hiền lành, vui tính và luôn yêu thương gia đình.
-                  Là con gái của <br />Ông Lê Càng.
-                  <br />
-                  và <br />
-                  Bà Trần Thị Sen.
-                </p>
+        <div class="row couple">
+          <div class="switch-content active" id="rowcouple1-content1">
+            <!-- Chú rể - Bên trái -->
+            <div class="col-md-6">
+              <div class="row align-items-center"> <!-- Thêm align-items-center -->
+                <div class="col-8 text-end">
+                  <div class="content-wrapper"> <!-- Thêm wrapper để dễ căn chỉnh -->
+                    <h2>Hải Đăng</h2>
+                    <p>
+                      <h3>Quý Nam</h3> <br>
+                      Nhà Trai: <br>
+                      <b>Ông TRẦN VĂN LỘC </b><br>
+                      và <br />
+                      <b>Bà NGUYỄN THỊ HÀ</b>
+                    </p>
+                  </div>
+                </div>
+                <div class="col-4 d-flex align-items-center justify-content-center"> <!-- Thêm flexbox -->
+                  <img
+                    src="img/couple/user3.jpg"
+                    alt="Hải Đăng"
+                    class="img-responsive rounded-circle"
+                  />
+                </div>
               </div>
-              <div class="col-4">
-                <a href="img/couple/user4.jpg" data-toggle="lightbox">
-                  <img src="img/couple/user4.jpg" class="img-responsive rounded-circle" alt="Hue" />
-                </a>
+            </div>
+            <!-- Cô dâu - Bên phải -->
+            <div class="col-md-6 ms-auto">
+              <div class="row align-items-center"> <!-- Thêm align-items-center -->
+                <div class="col-4 d-flex align-items-center justify-content-center"> <!-- Thêm flexbox -->
+                  <img
+                    src="img/couple/user4.jpg"
+                    alt="Hồng Ngọc"
+                    class="img-responsive rounded-circle"
+                  />
+                </div>
+                <div class="col-8">
+                  <div class="content-wrapper"> <!-- Thêm wrapper để dễ căn chỉnh -->
+                    <h2>Hồng Ngọc</h2>
+                    <p>
+                      <h3>Quý Nữ</h3> <br>
+                      Nhà Gái: <br>
+                      <b>Ông NGUYỄN HỮU CƯỜNG</b>
+                      <br>
+                      và <br>
+                      <b>Bà LÊ THỊ HUỆ</b>
+                    </p>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
-          <div class="col-md-6">
-            <div class="row">
-              <div class="col-4">
-                <a href="img/couple/user3.jpg" data-toggle="lightbox">
-                  <img src="img/couple/user3.jpg" class="img-responsive rounded-circle" alt="Long" />
-                </a>
+          <div class="switch-content" id="rowcouple2-content2">
+            <!-- Chú rể - Bên trái -->
+            <div class="col-md-6">
+              <div class="row align-items-center"> <!-- Thêm align-items-center -->
+                <div class="col-8 text-end">
+                  <div class="content-wrapper"> <!-- Thêm wrapper để dễ căn chỉnh -->
+                    
+                    <h2>Hồng Ngọc</h2>
+                    <p>
+                      <h3>Quý Nữ</h3> <br>
+                      Nhà Gái: <br>
+                      <b>Ông NGUYỄN HỮU CƯỜNG</b>
+                      <br>
+                      và <br>
+                      <b>Bà LÊ THỊ HUỆ</b>
+                    </p>
+                  </div>
+                </div>
+                <div class="col-4 d-flex align-items-center justify-content-center"> <!-- Thêm flexbox -->
+
+                  <img
+                  src="img/couple/user4.jpg"
+                  alt="Hồng Ngọc"
+                  class="img-responsive rounded-circle"
+                />
+                </div>
               </div>
-              <div class="col-8 text-couple">
-                <h3>Phạm Quang Long</h3>
-                <p>
-                  Chú rể hiền lành, vui tính và luôn yêu thương gia đình.
-                  Là con trai của <br />Ông xxx
-                  <br />
-                  và <br />
-                  Bà xxx.
-                </p>
+            </div>
+            <!-- Cô dâu - Bên phải -->
+            <div class="col-md-6 ms-auto">
+              <div class="row align-items-center"> <!-- Thêm align-items-center -->
+                <div class="col-4 d-flex align-items-center justify-content-center"> <!-- Thêm flexbox -->
+                  <img
+                    src="img/couple/user3.jpg"
+                    alt="Hải Đăng"
+                    class="img-responsive rounded-circle"
+                  />
+                </div>
+                <div class="col-8">
+                  <div class="content-wrapper"> <!-- Thêm wrapper để dễ căn chỉnh -->
+                    <h2>Hải Đăng</h2>
+                    <p>
+                      <h3>Quý Nam</h3> <br>
+                      Nhà Trai: <br>
+                      <b>Ông TRẦN VĂN LỘC</b> <br>
+                      và <br />
+                      <b>Bà NGUYỄN THỊ HÀ</b>
+                    </p>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
         </div>
       </div>
     </section>
-    <section id="info" class="info">
+    <!-- <section id="info" class="info">
       <div class="container">
         <div class="row justify-content-center">
           <div class="col-md-8 text-center">
             <h2>Thiệp Mời</h2>
             <h3>Trân trọng kính mời</h3>
-            <div class="content-switcher">
-              <!-- Content Container -->
-              <div class="content-container">
-                <!-- Content 1 -->
-                <div class="switch-content active" id="content1">
-                  <div class="images-container">
-                    <img src="img/gallery/thumbnail/thumb1.jpg" alt="Hình 1" class="switch-img active">
-                  </div>
-                  <p class="switch-text">Đây là nội dung mô tả Thông tin lễ Thành Hôn. Bạn có thể viết bất kỳ nội dung gì bạn muốn ở đây.</p>
-                </div>
-                
-                <!-- Content 2 -->
-                <div class="switch-content" id="content2">
-                  <div class="images-container">
-                    <img src="img/gallery/thumbnail/thumb2.jpg" alt="Hình 2" class="switch-img">
-                  </div>
-                  <p class="switch-text">Đây là nội dung mô tả Thông tin Lễ Vu Quy. Nội dung này sẽ thay đổi khi bạn click button thứ 2.</p>
-                </div>
-              </div>
-            </div>
           </div>
         </div>
       </div>
-    </section>
+    </section> -->
 
     <!-- Information Start -->
     <section id="info" class="info">
@@ -297,27 +313,31 @@
             <h2>Thông tin sự kiện</h2>
             <p class="switch-content active" id="info-content1">
               <strong>Nhà Trai</strong><br>
-              Địa chỉ: Nhà hàng tiệc cưới Việt Hồng. <br />QL1A/416 Đường Hùng Vương, Xã Hoàn Lão,
+              <strong>Vào lúc 11:00</strong><br>
+              <strong>Ngày 14 Tháng 12 Năm 2025</strong><br>
+              Địa chỉ: Nhà hàng MEMORY. <br />56 Đường Nguyễn Văn Linh, Xã Hoàn Lão,
               Tỉnh Quảng Trị, Việt Nam<br />
             </p>
             <p class="switch-content" id="info-content2">
               <strong>Nhà Gái</strong><br>
-              Địa chỉ: Nhà hàng tiệc cưới Việt Hồng 1. <br />QL1A/416 Đường Hùng Vương, Xã Hoàn Lão,
+              <strong>Vào lúc 11:00</strong><br>
+              <strong>Ngày 13 Tháng 12 Năm 2025</strong><br>
+              Địa chỉ: Nhà hàng ĐÔNG NAM LUXURY. <br />Đường Nguyễn Văn Linh, Xã Hoàn Lão,
               Tỉnh Quảng Trị, Việt Nam<br />
             </p>
             <a
-              href="https://maps.app.goo.gl/arJ5Mdi5MNPbuGWm7"
+              href="https://maps.app.goo.gl/viexYhCS7B1j3fKz9"
               target="_blank"
               class="btn btn-light btn-sm my-4 switch-content active"
               id="link-content1"
-              >Nhấn để mở bản đồ Nhà Trai</a
+              >Nhấn để mở bản đồ NHÀ HÀNG MEMORY</a
             >
             <a
-              href="https://maps.app.goo.gl/arJ5Mdi5MNPbuGWm7"
+              href="https://maps.app.goo.gl/8HezAinmiRr3FziUA"
               target="_blank"
               id="link-content2"
               class="btn btn-light btn-sm my-4 switch-content"
-              >Nhấn để mở bản đồ Nhà Gái</a
+              >Nhấn để mở bản đồ NHÀ HÀNG ĐÔNG NAM LUXURY</a
             >
             <p class="description">
               Xin vui lòng chú ý để không nhầm lẫn địa điểm và ngày giờ. Nếu bạn đến nơi mà không có dấu hiệu nào cho thấy lễ cưới đang diễn ra, có thể bạn đã đến sai ngày hoặc sai địa điểm.
@@ -327,31 +347,33 @@
         <div class="row justify-content-center mt-4">
           <div class="col-md-5 col-10">
             <div class="card text-center text-bg-light mb-5 switch-content active" id="div-content1">
-              <div class="card-header">Lễ Thành Hôn</div>
+              <div class="card-header">HÔN LỄ ĐƯỢC CỬ HÀNH TẠI TƯ GIA NHÀ NAM</div>
               <div class="card-body">
                 <div class="row justify-content-center">
                   <div class="col-md-6">
                     <i class="bi bi-clock d-block"></i>
-                    <span>08.00 - 10.00</span>
+                    <span>9.00</span>
                   </div>
                   <div class="col-md-6">
                     <i class="bi bi-calendar-event d-block"></i>
-                    <span>Thứ 7, 20 Tháng 11 Năm 2025</span>
+                    <span>Ngày 14 Tháng 12 Năm 2025</span><br>
+                    <span>Nhằm ngày 25 Tháng 10 Năm Ất Tỵ</span>
                   </div>
                 </div>
               </div>
             </div>
             <div class="card text-center text-bg-light mb-5 switch-content" id="div-content2">
-              <div class="card-header">Lễ Vu Quy</div>
+              <div class="card-header">HÔN LỄ ĐƯỢC CỬ HÀNH TẠI TƯ GIA NHÀ NỮ</div>
               <div class="card-body">
                 <div class="row justify-content-center">
                   <div class="col-md-6">
                     <i class="bi bi-clock d-block"></i>
-                    <span>08.00 - 10.00</span>
+                    <span>7.30</span>
                   </div>
                   <div class="col-md-6">
                     <i class="bi bi-calendar-event d-block"></i>
-                    <span>Chủ Nhật, 20 Tháng 11 Năm 2025</span>
+                    <span>Ngày 13 Tháng 12 Năm 2025</span><br>
+                    <span>Nhằm ngày 24 Tháng 10 Năm Ất Tỵ</span>
                   </div>
                 </div>
               </div>
@@ -368,7 +390,8 @@
                   </div>
                   <div class="col-md-6">
                     <i class="bi bi-calendar-event d-block"></i>
-                    <span>Thứ 7, 20 Tháng 11 Năm 2025</span>
+                    <span>Ngày 14 Tháng 12 Năm 2025</span><br>
+                    <span>Nhằm ngày 25 Tháng 10 Năm Ất Tỵ</span>
                   </div>
                 </div>
               </div>
@@ -383,7 +406,8 @@
                   </div>
                   <div class="col-md-6">
                     <i class="bi bi-calendar-event d-block"></i>
-                    <span>Chủ Nhật, 20 Tháng 11 Năm 2025</span>
+                    <span>Ngày 13 Tháng 12 Năm 2025</span><br>
+                    <span>Nhằm ngày 24 Tháng 10 Năm Ất Tỵ</span>
                   </div>
                 </div>
               </div>
@@ -399,24 +423,23 @@
       <div class="container">
         <div class="row justify-content-center">
           <div class="col-md-8 col-10 text-center">
-            <span>Câu chuyện tình yêu</span>
-            <h2>Câu Chuyện Của Chúng Tôi</h2>
+            <h2>Câu Chuyện Tình Yêu</h2>
             <p>
               Chúng tôi gặp nhau lần đầu tiên vào một ngày thật bình thường,
-              nhưng lại trở thành ngày đặc biệt nhất. Từ những cuộc trò chuyện
-              nhỏ, chúng tôi dần hiểu nhau hơn và cùng viết nên hành trình yêu thương
-              đầy ý nghĩa này.
+          nhưng lại trở thành ngày đặc biệt nhất. Từ những cuộc trò chuyện
+          nhỏ, chúng tôi dần hiểu nhau hơn và cùng viết nên hành trình yêu thương
+          đầy ý nghĩa này.
             </p>
           </div>
         </div>
-    
+
         <div class="row">
           <div class="col">
             <ul class="timeline">
-              <li class="timeline-li">
+              <li>
                 <div
                   class="timeline-img"
-                  style="background-image: url(img/bg-wedding.jpg)"
+                  style="background-image: url(img/story-love1.jpg)"
                 ></div>
                 <div class="timeline-panel">
                   <div class="timeline-heading">
@@ -430,10 +453,10 @@
                   </div>
                 </div>
               </li>
-              <li class="timeline-li timeline-inverted">
+              <li class="timeline-inverted">
                 <div
                   class="timeline-img"
-                  style="background-image: url(https://picsum.photos/300/300)"
+                  style="background-image: url(img/story-love2.jpg)"
                 ></div>
                 <div class="timeline-panel">
                   <div class="timeline-heading">
@@ -447,10 +470,10 @@
                   </div>
                 </div>
               </li>
-              <li class="timeline-li">
+              <li>
                 <div
                   class="timeline-img"
-                  style="background-image: url(https://picsum.photos/301/301)"
+                  style="background-image: url(img/story-love3.jpg)"
                 ></div>
                 <div class="timeline-panel">
                   <div class="timeline-heading">
@@ -459,7 +482,7 @@
                   </div>
                   <div class="timeline-body">
                     <p>
-                      Khoảnh khắc anh ngỏ lời — em nói "Đồng ý" với niềm hạnh phúc vỡ òa.
+                      Khoảnh khắc anh ngỏ lời — em nói “Đồng ý” với niềm hạnh phúc vỡ òa.
                     </p>
                   </div>
                 </div>
@@ -478,50 +501,108 @@
           <div class="col-md-8 col-10 text-center">
             <span>Kỷ niệm của chúng tôi</span>
             <h2>Thư viện ảnh</h2>
-            <p>
+            <span>
               Những khoảnh khắc hạnh phúc được lưu giữ qua từng bức hình — hành trình yêu thương của chúng tôi.
-            </p>
+            </span>
           </div>
         </div>
-        <div class="row row-cols-lg-4 row-cols-md-3 row-cols-sm-2 row-cols-1 justify-content-center">
+        <div
+          class="row row-cols-lg-4 row-cols-md-3 row-cols-sm-2 row-cols-1 justify-content-center"
+        >
           <div class="col mt-3">
-            <a href="img/gallery/thumbnail/thumb1.jpg" data-toggle="lightbox" data-gallery="my-gallery">
-              <img src="img/gallery/thumbnail/thumb1.jpg" class="img-fluid w-100 rounded" alt="Kỷ niệm 1" />
+            <a
+              href="img/gallery/thumbnail/thumb1.jpg"
+              data-toggle="lightbox"
+              data-gallery="my-gallery"
+            >
+              <img
+                src="img/gallery/thumbnail/thumb1.jpg"
+                class="img-fluid w-100 rounded"
+              />
             </a>
           </div>
           <div class="col mt-3">
-            <a href="img/gallery/thumbnail/thumb2.jpg" data-toggle="lightbox" data-gallery="my-gallery">
-              <img src="img/gallery/thumbnail/thumb2.jpg" class="img-fluid w-100 rounded" alt="Kỷ niệm 2" />
+            <a
+              href="img/gallery/thumbnail/thumb2.jpg"
+              data-toggle="lightbox"
+              data-gallery="my-gallery"
+            >
+              <img
+                src="img/gallery/thumbnail/thumb2.jpg"
+                class="img-fluid w-100 rounded"
+              />
             </a>
           </div>
           <div class="col mt-3">
-            <a href="img/gallery/thumbnail/thumb3.jpg" data-toggle="lightbox" data-gallery="my-gallery">
-              <img src="img/gallery/thumbnail/thumb3.jpg" class="img-fluid w-100 rounded" alt="Kỷ niệm 3" />
+            <a
+              href="img/gallery/thumbnail/thumb3.jpg"
+              data-toggle="lightbox"
+              data-gallery="my-gallery"
+            >
+              <img
+                src="img/gallery/thumbnail/thumb3.jpg""
+                class="img-fluid w-100 rounded"
+              />
             </a>
           </div>
           <div class="col mt-3">
-            <a href="img/gallery/thumbnail/thumb4.jpg" data-toggle="lightbox" data-gallery="my-gallery">
-              <img src="img/gallery/thumbnail/thumb4.jpg" class="img-fluid w-100 rounded" alt="Kỷ niệm 4" />
+            <a
+              href="img/gallery/thumbnail/thumb4.jpg"
+              data-toggle="lightbox"
+              data-gallery="my-gallery"
+            >
+              <img
+                src="img/gallery/thumbnail/thumb4.jpg""
+                class="img-fluid w-100 rounded"
+              />
             </a>
           </div>
           <div class="col mt-3">
-            <a href="img/gallery/thumbnail/thumb5.jpg" data-toggle="lightbox" data-gallery="my-gallery">
-              <img src="img/gallery/thumbnail/thumb5.jpg" class="img-fluid w-100 rounded" alt="Kỷ niệm 5" />
+            <a
+              href="img/gallery/thumbnail/thumb5.jpg"
+              data-toggle="lightbox"
+              data-gallery="my-gallery"
+            >
+              <img
+                src="img/gallery/thumbnail/thumb5.jpg""
+                class="img-fluid w-100 rounded"
+              />
             </a>
           </div>
           <div class="col mt-3">
-            <a href="img/gallery/thumbnail/thumb6.jpg" data-toggle="lightbox" data-gallery="my-gallery">
-              <img src="img/gallery/thumbnail/thumb6.jpg" class="img-fluid w-100 rounded" alt="Kỷ niệm 6" />
+            <a
+              href="img/gallery/thumbnail/thumb6.jpg"
+              data-toggle="lightbox"
+              data-gallery="my-gallery"
+            >
+              <img
+                src="img/gallery/thumbnail/thumb6.jpg""
+                class="img-fluid w-100 rounded"
+              />
             </a>
           </div>
           <div class="col mt-3">
-            <a href="img/gallery/thumbnail/thumb7.jpg" data-toggle="lightbox" data-gallery="my-gallery">
-              <img src="img/gallery/thumbnail/thumb7.jpg" class="img-fluid w-100 rounded" alt="Kỷ niệm 7" />
+            <a
+              href="img/gallery/thumbnail/thumb7.jpg"
+              data-toggle="lightbox"
+              data-gallery="my-gallery"
+            >
+              <img
+                src="img/gallery/thumbnail/thumb7.jpg""
+                class="img-fluid w-100 rounded"
+              />
             </a>
           </div>
           <div class="col mt-3">
-            <a href="img/gallery/thumbnail/thumb8.jpg" data-toggle="lightbox" data-gallery="my-gallery">
-              <img src="img/gallery/thumbnail/thumb8.jpg" class="img-fluid w-100 rounded" alt="Kỷ niệm 8" />
+            <a
+              href="img/gallery/thumbnail/thumb8.jpg"
+              data-toggle="lightbox"
+              data-gallery="my-gallery"
+            >
+              <img
+                src="img/gallery/thumbnail/thumb8.jpg""
+                class="img-fluid w-100 rounded"
+              />
             </a>
           </div>
         </div>
@@ -541,14 +622,14 @@
 
         <form
           method="POST"
-          action="https://script.google.com/macros/s/AKfycbwM4GJRtRBuluMKpks2-Bqwa7zm7yyIXLfusiLthTkMmdhzN0F478Ss45PMzA3dj34bsA/exec"
+          action="https://script.google.com/macros/s/AKfycbx8JSrzceAA4HTIkH2WO6MGWYC-blELHyj3sIzac5hAq8d1OPqQGRZG2KmAUHAtqSnZNA/exec"
           class="row row-cols-md-auto g-3 align-items-center justify-content-center"
           id="my-form"
         >
           <div class="col-12">
             <div class="mb-3">
               <label for="name" class="form-label">Họ và Tên</label>
-              <input type="text" class="form-control" id="name" name="name" required/>
+              <input type="text" class="form-control" id="name" name="name" />
             </div>
           </div>
           <div class="col-12">
@@ -558,21 +639,21 @@
                 type="number"
                 min="1"
                 max="5"
+                length="1"
                 value="1"
                 class="form-control"
                 id="soluong"
                 name="soluong"
-                required
               />
             </div>
           </div>
           <div class="col-12">
             <div class="mb-3">
               <label for="status" class="form-label">Xác Nhận</label>
-              <select name="status" id="status" class="form-select" required>
-                <option value="" selected disabled>Vui lòng chọn một tuỳ chọn</option>
-                <option value="1" >Sẽ Tham dự</option>
-                <option value="0" >Không Tham dự</option>
+              <select name="status" id="status" class="form-select">
+                <option selected>Vui lòng chọn một tuỳ chọn</option>
+                <option value="1" selected>Sẽ Tham dự</option>
+                <option value="0" selected>Không Tham dự</option>
               </select>
             </div>
           </div>
@@ -589,11 +670,10 @@
       <div class="container">
         <div class="row justify-content-center">
           <div class="col-md-8 col-10 text-center">
-            <span>Biểu hiện tấm lòng</span>
             <h2>Gửi Quà</h2>
             <p>
               Chúng tôi rất hạnh phúc khi nhận được tình cảm và lời chúc
-          từ bạn trong ngày trọng đại. Nếu bạn muốn gửi quà hay hỗ trợ,
+          từ bạn trong ngày trọng đại. Nếu bạn muốn gửi quà,
           xin vui lòng chuyển qua các tài khoản dưới đây. Mỗi món quà
           đều được chúng tôi trân trọng và nhớ mãi.
             </p>
@@ -604,11 +684,11 @@
             <ul class="list-group">
               <li class="list-group-item">
                 <div>Vietcombank</div>
-                1232134234 - PHAN VAN LUONG
+                1232134234 - TRAN HAI DANG
               </li>
               <li class="list-group-item">
                 <div>Viettinbank</div>
-                1232134234 - LE THI TUYET
+                1232134234 - NGUYEN HONG NGOC
               </li>
             </ul>
           </div>
@@ -751,7 +831,6 @@
         });
       })();
     </script>
-    <!-- CODE ANIMATION HEART START -->
     <script>
       /* test animation heart */
       let heartsInterval;
@@ -823,10 +902,10 @@
         isHeartsRunning = true;
 
         // Tạo hearts liên tục mỗi 200ms
-        heartsInterval = setInterval(createFloatingHeart, 500);
+        heartsInterval = setInterval(createFloatingHeart, 200);
 
         // Tạo ngay một vài hearts đầu tiên
-        for (let i = 0; i < 5; i++) {
+        for (let i = 0; i < 10; i++) {
           setTimeout(() => createFloatingHeart(), i * 200);
         }
         }
@@ -884,14 +963,12 @@
       }
       });
     </script>
-    <!-- CODE ANIMATION HEART END -->
-    <!-- CODE MANAGE countdown START -->
     <script>
       simplyCountdown(".simply-countdown", {
-        year: 2026, // required
-        month: 6, // required
-        day: 7, // required
-        hours: 8, // Default is 0 [0-23] integer
+        year: 2025, // required
+        month: 12, // required
+        day: 14, // required
+        hours: 0, // Default is 0 [0-23] integer
         words: {
           //words displayed into the countdown
           days: { singular: "Ngày", plural: "Ngày" },
@@ -901,8 +978,6 @@
         },
       });
     </script>
-    <!-- CODE MANAGE countdown END -->
-    <!-- CODE MANAGE SCROLL START -->
     <script>
       const hamburger = document.querySelector(".navbar-toggler");
       const stickyTop = document.querySelector(".sticky-top");
@@ -968,8 +1043,6 @@
       // }
       disableScroll();
     </script>
-    <!-- CODE MANAGE SCROLL END -->
-    <!-- CODE MANAGE SEND MAIL START -->
     <script>
       window.addEventListener("load", function () {
         const form = document.getElementById("my-form");
@@ -987,18 +1060,16 @@
         });
       });
     </script>
-    <!-- CODE MANAGE SEND MAIL END -->
     <!-- Get url by name -->
     <script>
       const urlParam = new URLSearchParams(window.location.search);
       const name = urlParam.get("n") || "";
       const pronoun = urlParam.get("p") || "Quý Ông/Bà/Anh/Chị/Em/Bạn";
       const nameContainer = document.querySelector(".hero h4 span");
-      nameContainer.innerText = `${pronoun} ${name},`.replace(/, $/, ",");
+      nameContainer.innerText = `${pronoun} ${name},`.replace(/, $/,",");
       // console.log(name);
       document.querySelector("#name").value = name;
     </script>
-    <!-- CODE MANAGE SWITCHS INVITE START -->
     <script>
       function switchContent(targetId) {
         // Tất cả elements cần chuyển đổi
@@ -1018,8 +1089,8 @@
         const linkContent = document.getElementById('link-' + targetId);
         const divContent = document.getElementById('div-' + targetId);
         const div2Content = document.getElementById('div2-' + targetId);
-        const rowContent = document.getElementById('row-' + targetId);
-        const coupleContent = document.getElementById('couple-' + targetId);
+        const rowcouple1 = document.getElementById('rowcouple1-' + targetId);
+        const rowcouple2 = document.getElementById('rowcouple2-' + targetId);
 
         if (mainContent) mainContent.classList.add('active');
         if (targetButton) targetButton.classList.add('active');
@@ -1027,9 +1098,8 @@
         if (linkContent) linkContent.classList.add('active');
         if (divContent) divContent.classList.add('active');
         if (div2Content) div2Content.classList.add('active');
-        if (rowContent) rowContent.classList.add('active');
-        if (coupleContent) coupleContent.classList.add('active');
-
+        if (rowcouple1) rowcouple1.classList.add('active');
+        if (rowcouple2) rowcouple2.classList.add('active');
       }
 
       // Khởi tạo
@@ -1047,91 +1117,5 @@
         switchContent('content1');
       });
     </script>
-    <!-- CODE MANAGE SWITCHS INVITE END -->
-    <!-- CODE MANAGE  ANIMATION SCROLL START -->
-    <script>
-      // Intersection Observer for scroll animations
-      function initScrollAnimations() {
-        const observerOptions = {
-          threshold: 0.1,
-          rootMargin: '0px 0px -50px 0px'
-        };
-
-        const observer = new IntersectionObserver(function(entries) {
-          entries.forEach(entry => {
-            if (entry.isIntersecting) {
-              entry.target.classList.add('visible');
-
-              // Nếu là gallery section, animate từng item
-              if (entry.target.classList.contains('gallery')) {
-                const galleryItems = entry.target.querySelectorAll('.col');
-                galleryItems.forEach((item, index) => {
-                  setTimeout(() => {
-                    item.classList.add('visible');
-                  }, index * 100);
-                });
-              }
-              
-              // Nếu là timeline item, thêm delay cho từng item
-              if (entry.target.classList.contains('timeline-li')) {
-                const items = document.querySelectorAll('.timeline li');
-                items.forEach((item, index) => {
-                  setTimeout(() => {
-                    item.classList.add('visible');
-                  }, index * 600);
-                });
-              }
-
-              // Nếu là home section
-              if (entry.target.classList.contains('home')) {
-                // Animation đã được xử lý bằng CSS với delay
-              }
-            }
-          });
-        }, observerOptions);
-
-        // Observe tất cả sections
-        const sections = document.querySelectorAll('.home, .story, .gallery, .couple, .timeline li, .gallery .col');
-          sections.forEach(section => {
-            observer.observe(section);
-          });
-      }
-
-      // Initialize when page loads
-      document.addEventListener('DOMContentLoaded', function() {
-        initScrollAnimations();
-        // Khởi tạo lightbox nếu có
-        if (typeof bootstrap !== 'undefined') {
-          const lightbox = new bootstrap.Lightbox(document.querySelector('[data-gallery="my-gallery"]'));
-        }
-      });
-      // Fallback cho trình duyệt cũ
-      function initScrollAnimationsFallback() {
-        const elements = document.querySelectorAll('.home, .story, .gallery, .couple, .timeline li, .gallery .col');
-        
-        function checkScroll() {
-          elements.forEach(element => {
-            const elementTop = element.getBoundingClientRect().top;
-            const windowHeight = window.innerHeight;
-            
-            if (elementTop < windowHeight * 0.85) {
-              element.classList.add('visible');
-            }
-          });
-        }
-        
-        window.addEventListener('scroll', checkScroll);
-        window.addEventListener('resize', checkScroll);
-        checkScroll(); // Check ngay khi load
-      }
-
-      // Sử dụng Intersection Observer nếu được hỗ trợ, nếu không dùng fallback
-      if ('IntersectionObserver' in window) {
-        document.addEventListener('DOMContentLoaded', initScrollAnimations);
-      } else {
-        document.addEventListener('DOMContentLoaded', initScrollAnimationsFallback);
-      }    
-    </script>
-    <!-- CODE MANAGE  ANIMATION SCROLL END -->
   </body>
 </html>
